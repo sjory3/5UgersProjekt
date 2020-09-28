@@ -5,10 +5,11 @@ import { ArchiveComponent } from './archive/archive.component'
 import { FrontPageComponent } from './front-page/front-page.component'
 
 
-const routes: Routes = [{ path: 'application', component: ApplicationComponent },
-{ path: 'archive', component: ArchiveComponent },
-{ path: 'front-page', component: FrontPageComponent },
-{ path: '', redirectTo: '/front-page', pathMatch: 'full' }
+const routes: Routes = [
+  { path: 'application', component: ApplicationComponent },
+  { path: 'archive', component: ArchiveComponent },
+  { path: 'front-page', component: FrontPageComponent },
+  { path: '', redirectTo: '/front-page', pathMatch: 'full' }
 ];
 
 @NgModule({
