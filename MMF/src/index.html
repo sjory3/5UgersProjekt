@@ -9,6 +9,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
   <title>MMF</title>
+  <base href="/">
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
   <!-- Font Awesome icons (free version)-->
   <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
@@ -33,11 +34,11 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item"><a class="nav-link js-scroll-trigger"
-              href="/MMF/src/app/front-page/front-page.component.html">Front</a></li>
+              [routerLink]="['/front-page']">Front</a></li>
           <li class="nav-item"><a class="nav-link js-scroll-trigger"
-              href="/MMF/src/app/archive/archive.component.html">Archive</a></li>
+              [routerLink]="['/archive']">Archive</a></li>
           <li class="nav-item"><a class="nav-link js-scroll-trigger"
-              href="/MMF/src/app/application/application.component.html">Application</a></li>
+              [routerLink]="['/application']">Application</a></li>
         </ul>
       </div>
     </div>
@@ -203,7 +204,6 @@
     })(jQuery); // End of use strict
     
     </script>
-
 </body>
-
 </html>
+<router-outlet></router-outlet>
