@@ -1,4 +1,0 @@
-{
-    "appService.defaultWebAppToDeploy": "/subscriptions/6002c42a-eb22-4d46-a9b5-e3bbb9ec26cf/resourceGroups/learn-0bd534f3-9337-4bd0-9238-5ec496bd27f9/providers/Microsoft.Web/sites/MissionMinimizeFires",
-    "appService.deploySubpath": "."
-}
