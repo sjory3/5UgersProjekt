@@ -12,7 +12,6 @@ export class AppComponent {
 
   onWindowScroll(e): void {
     let element = document.querySelector('.navbar');
-    let navItems = document.querySelector('.nav-item');
 
     if (window.pageYOffset > element.clientHeight) {
       element.classList.add('bg-light');
