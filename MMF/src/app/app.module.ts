@@ -19,7 +19,7 @@ import { ApplicationComponent } from './application/application.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

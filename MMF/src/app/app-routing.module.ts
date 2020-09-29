@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ApplicationComponent } from './application/application.component'
-import { ArchiveComponent } from './archive/archive.component'
-import { FrontPageComponent } from './front-page/front-page.component'
+import { ApplicationComponent } from './application/application.component';
+import { ArchiveComponent } from './archive/archive.component';
+import { FrontPageComponent } from './front-page/front-page.component';
 
 
 const routes: Routes = [
@@ -13,7 +13,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    anchorScrolling: 'enabled'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
