@@ -97,7 +97,8 @@ html {
 @media (min-width: 992px) {
   .projects-section .featured-text {
     padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #64a19d;
+    border-left: 0.5rem solid #333;
+    
   }
 }
 .projects-section .project-text {
@@ -174,3 +175,4 @@ html {
 .footer {
   padding: 5rem 0;
 }
+
