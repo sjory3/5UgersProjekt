@@ -8,9 +8,9 @@ namespace ArduinoHttpClient
         //instance messages to output to the console
         Messages messages = new Messages();
         //getting the connection credentials from a file
-        static string connStr = ConnectionString.ConnectionStringToDatabase();
+        static string connString = ConnectionString.ConnectionStringToDatabase();
         //making a connection to the MySql database with the connection string
-        MySqlConnection conn = new MySqlConnection(connStr);
+        MySqlConnection conn = new MySqlConnection(connString);
 
         public void OpenConnectionToMySqlDatabase()
         {

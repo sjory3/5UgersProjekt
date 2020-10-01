@@ -14,7 +14,6 @@ namespace ArduinoHttpClient
         static void Main(string[] args)
         {
             //instansiate the diffrent classes to call the methods they have
-            Messages consoleMessages = new Messages();
             HttpClientConnection httpClient = new HttpClientConnection();
             DatabaseConnection database = new DatabaseConnection();
 
@@ -24,8 +23,6 @@ namespace ArduinoHttpClient
                 //Gets the data from the arduino webserver
                 httpClient.HttpGetRequestFromArudino();
 
-                //outputs a responce to the console
-                consoleMessages.SucssesFullResponceFromArduino(responseBody);
 
                 //opens a connection to the database
                 database.OpenConnectionToMySqlDatabase();

@@ -10,6 +10,7 @@ namespace ArduinoHttpClient
 {
     class HttpClientConnection
     {
+        Messages messages = new Messages();
         public async Task HttpGetRequestFromArudino()
         {
             //instance httpClient as client
@@ -25,6 +26,9 @@ namespace ArduinoHttpClient
 
             //parsing the respose to a int and saving it in the public attribute
             Program.responseBody = int.Parse(response.Content.ReadAsStringAsync().GetAwaiter().GetResult());
+
+            //outputs a responce to the console
+            messages.SucssesFullResponceFromArduino(Program.responseBody);
 
         }
     }
