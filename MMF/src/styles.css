@@ -174,5 +174,24 @@ html {
 
 .footer {
   padding: 5rem 0;
+z-index: 10 !important;
+position: relative;
 }
+
+.navbar-expand-lg .navbar-collapse{
+  z-index: 10;
+}
+
+.navbar-expand-lg{
+  z-index: 10;
+}
+
+.navbar-collapse{
+  z-index: 10;
+}
+
+.navbar{
+  z-index: 10;
+}
+
 
