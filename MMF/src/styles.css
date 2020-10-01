@@ -174,7 +174,7 @@ html {
 
 .footer {
   padding: 3rem 0;
-z-index: 10 !important;
+z-index: 100 !important;
 position: relative;
 }
 
@@ -204,5 +204,6 @@ position: relative;
 bottom: 0;
 left: 0;
 top: 1;
+margin-top: 7.2vh;
 z-index: 11;
 }
