@@ -12,12 +12,18 @@ namespace ArduinoHttpClient
     {
         public async Task HttpGetRequestFromArudino()
         {
-            var client = new HttpClient();
+            //instance httpClient as client
+            HttpClient client = new HttpClient();
+            //the ip addres for the arduino
             string url = "http://192.168.1.177/";
 
+            //gets the data from the website
             HttpResponseMessage response = client.GetAsync(url).GetAwaiter().GetResult();
 
+            //making sure that the responce was a sucess
             response.EnsureSuccessStatusCode();
+
+            //parsing the respose to a int and saving it in the public attribute
             Program.responseBody = int.Parse(response.Content.ReadAsStringAsync().GetAwaiter().GetResult());
 
         }

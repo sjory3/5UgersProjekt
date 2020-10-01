@@ -8,6 +8,7 @@ namespace ArduinoHttpClient
 {
     class Messages
     {
+        //methods for outputing to the console
         public void SucssesFullResponceFromArduino(int responce)
         {
             Console.WriteLine("Responce from arduino = " + responce);

@@ -13,18 +13,24 @@ namespace ArduinoHttpClient
         public static int responseBody;
         static void Main(string[] args)
         {
+            //instansiate the diffrent classes to call the methods they have
             Messages consoleMessages = new Messages();
             HttpClientConnection httpClient = new HttpClientConnection();
             DatabaseConnection database = new DatabaseConnection();
+
             //while loop runs every 10 sek and get the http from the arduino and saving it to the database
             while (true)
             {
-
+                //Gets the data from the arduino webserver
                 httpClient.HttpGetRequestFromArudino();
 
+                //outputs a responce to the console
                 consoleMessages.SucssesFullResponceFromArduino(responseBody);
 
+                //opens a connection to the database
                 database.OpenConnectionToMySqlDatabase();
+
+                //sleeps for 10 sek
                 System.Threading.Thread.Sleep(10000);
             }
         }
