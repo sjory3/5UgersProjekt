@@ -12,3 +12,6 @@ body {
     height: 700px !important;
   }
 
+  .navbar-dark .navbar-brand{
+      color: hotpink !important;
+  }
