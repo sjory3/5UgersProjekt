@@ -8,7 +8,7 @@ namespace ArduinoHttpClient
 {
     class Converter
     {
-        public static int ConvertHttpResponseToInt(string response)
+        public static int ConvertStringToInt(string response)
         {
             int result = int.Parse(response);
             return result;

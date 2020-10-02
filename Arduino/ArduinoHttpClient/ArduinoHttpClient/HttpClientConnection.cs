@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -10,8 +11,7 @@ namespace ArduinoHttpClient
 {
     class HttpClientConnection
     {
-        Messages messages = new Messages();
-        public async Task HttpGetRequestFromArudino(string url)
+        public string HttpGetRequestFromArudino(string url)
         {
             //instance httpClient as client
             HttpClient client = new HttpClient();
@@ -25,13 +25,11 @@ namespace ArduinoHttpClient
             response.EnsureSuccessStatusCode();
 
             //getting the response
-            var result = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+            string result = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
 
-            //parsing the respose to a int and saving it in the public attribute
-            Program.responseBody = Converter.ConvertHttpResponseToInt(result);
-
-            //outputs a responce to the console
-            messages.SucssesFullResponceFromArduino(Program.responseBody);
+            Debug.WriteLine("Sucess. Got the response from http");
+            //returns the response
+            return result;
 
         }
     }

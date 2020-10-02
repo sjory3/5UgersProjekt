@@ -95,7 +95,6 @@
     <Compile Include="Converter.cs" />
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="HttpClientConnection.cs" />
-    <Compile Include="Messages.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
