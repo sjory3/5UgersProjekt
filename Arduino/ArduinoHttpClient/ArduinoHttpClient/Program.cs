@@ -17,11 +17,13 @@ namespace ArduinoHttpClient
             HttpClientConnection httpClient = new HttpClientConnection();
             DatabaseConnection database = new DatabaseConnection();
 
+            string url = "http://192.168.1.177/";
+
             //while loop runs every 10 sek and get the http from the arduino and saving it to the database
             while (true)
             {
                 //Gets the data from the arduino webserver
-                httpClient.HttpGetRequestFromArudino();
+                httpClient.HttpGetRequestFromArudino(url);
 
 
                 //opens a connection to the database

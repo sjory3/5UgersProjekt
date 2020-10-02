@@ -92,6 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConnectionString.cs" />
+    <Compile Include="Converter.cs" />
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="HttpClientConnection.cs" />
     <Compile Include="Messages.cs" />
