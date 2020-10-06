@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { FrontPageComponent } from './front-page/front-page.component';
 import { ArchiveComponent } from './archive/archive.component';
 import { ApplicationComponent } from './application/application.component';
+import { GraphComponent } from './graph/graph.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ApplicationComponent } from './application/application.component';
     AppComponent,
     FrontPageComponent,
     ArchiveComponent,
-    ApplicationComponent
+    ApplicationComponent,
+    GraphComponent
   ],
   imports: [
     BrowserModule,

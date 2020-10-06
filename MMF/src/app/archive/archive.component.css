@@ -91,5 +91,10 @@ body {
   
   .border-top { border-top: 1px solid #e5e5e5; }
   .border-bottom { border-bottom: 1px solid #e5e5e5; }
-  
+
+  .canvasStyle{
+    width : 1550px !important;
+    height : 400px !important;
+    margin-top: 4.5rem !important;
+  }
   
