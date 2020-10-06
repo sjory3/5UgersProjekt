@@ -52,7 +52,6 @@
  *
  */
 
-import "core-js/proposals/reflect-metadata";
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.
  */
