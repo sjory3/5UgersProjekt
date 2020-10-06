@@ -1,11 +1,12 @@
-body {
+#content {
     background: url('../../assets/mist.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    height: 800px;
+    height: 100%;
     padding-top: 1%;
+    padding-bottom: 4vh;
   }
 
   .card-body{
@@ -14,4 +15,8 @@ body {
 
   .navbar-dark .navbar-brand{
       color: hotpink !important;
+  }
+
+  #map {
+    height: 100%;
   }

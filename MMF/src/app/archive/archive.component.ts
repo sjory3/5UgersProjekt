@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ApiService } from '../api.service';
+import { Place } from '../place';
 
 @Component({
   selector: 'app-archive',
@@ -7,6 +8,7 @@ import { ApiService } from '../api.service';
   styleUrls: ['./archive.component.css']
 })
 export class ArchiveComponent implements OnInit, OnDestroy {
+  places: Place[];
 
   constructor(private apiService: ApiService) { }
 
@@ -17,7 +19,19 @@ export class ArchiveComponent implements OnInit, OnDestroy {
     element.classList.remove('bg-transparent');
 
     this.apiService.GetPlaces().subscribe((data) => {
-      console.log(data);
+      for (let index = 0; index < 20; index++) {
+        let place = new Place(
+          data[index].id,
+          data[index].name,
+          data[index].cordinatesN,
+          data[index].cordinatesE,
+          data[index].temperature,
+          data[index].country,
+          data[index].soilMoisture
+        );
+        console.log(place);
+        this.places.push(place);
+      }
     });
   }
 
