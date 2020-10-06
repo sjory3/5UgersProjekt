@@ -8,7 +8,7 @@ import { Place } from '../place';
   styleUrls: ['./archive.component.css']
 })
 export class ArchiveComponent implements OnInit, OnDestroy {
-  places: Place[];
+  places: Place[] = [];
 
   constructor(private apiService: ApiService) { }
 
@@ -20,11 +20,12 @@ export class ArchiveComponent implements OnInit, OnDestroy {
 
     this.apiService.GetPlaces().subscribe((data) => {
       for (let index = 0; index < 20; index++) {
+        console.log(data[index]);
         let place = new Place(
           data[index].id,
           data[index].name,
-          data[index].cordinatesN,
-          data[index].cordinatesE,
+          data[index].coordinatesN,
+          data[index].coordinatesE,
           data[index].temperature,
           data[index].country,
           data[index].soilMoisture
