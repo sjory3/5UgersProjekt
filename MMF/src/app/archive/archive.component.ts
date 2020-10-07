@@ -42,4 +42,15 @@ export class ArchiveComponent implements OnInit, OnDestroy {
     element.classList.remove('bg-dark');
     element.classList.add('bg-transparent');
   }
+
+  Onclick(order: string){
+    if (order == 'desc'){
+    this.places.sort((a, b) => b.temperature < a.temperature ? -1 : b.temperature > a.temperature ? 1 : 0);
+       }
+
+      else if (order == 'asc'){
+        
+    this.places.sort((a, b) => a.temperature < b.temperature ? -1 : a.temperature > b.temperature ? 1 : 0);
+      }
+    }
 }
